@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generate and separate</title>
+</head>
+<body>
+    <p id="random"></p>
+    <p id="separated"></p>
+    <p id="date"></p>
+
+    <script>
+        var random;
+        var random = Math.floor(Math.random()*1001)
+        document.getElementById("random").innerHTML = "random number: "+ random;
+
+        var thousands = Math.floor(random/1000);
+        var hundreds = Math.floor((random%1000)/100);
+        var tens = Math.floor((random%100)/10);
+        var ones = Math.floor(random%10);
+
+        document.getElementById("separated").innerHTML="separated: "+ hundreds*100 + ", " + tens*10 + ", "+ones;
+        var date = new Date();
+        document.getElementById("date").innerHTML=date;
+
+    </script>
+</body>
+</html>
